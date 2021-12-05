@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "send": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/tohrux/wecom-bot/issues"
   },
-  "homepage": "https://github.com/tohrux/wecom-bot#readme"
+  "homepage": "https://github.com/tohrux/wecom-bot#readme",
+  "dependencies": {
+    "axios": "^0.24.0"
+  }
 }
