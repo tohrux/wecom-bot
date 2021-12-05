@@ -26,4 +26,4 @@ jobs:
         with:
           node-version: '12.2.1'
       - run: npm ci
-      - run: npm run se
+      - run: npm run send
