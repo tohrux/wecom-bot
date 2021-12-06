@@ -1,10 +1,13 @@
 const axios = require('axios')
+const WECOM_BOT_KEY = process.argv[2]
 const { getTodayDate } = require('./configs/daily.js')
-const data = require('./data/data.js')
-const url =
-  'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=fb50a89c-cda0-4b85-992f-6009e99211ff'
+const DATA = require('./data/data.js')
 
-const dailyData = getTodayDate()
+const url =
+  `https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=${WECOM_BOT_KEY}`
+
+const DAILY_DATA = getTodayDate()
+
 const axiosConfig = {
   method: 'post',
   headers: {
@@ -15,17 +18,17 @@ const axiosConfig = {
     template_card: {
       card_type: 'news_notice',
       main_title: {
-        title: dailyData.title,
-        desc: dailyData.desc,
+        title: DAILY_DATA.title,
+        desc: DAILY_DATA.desc,
       },
       card_image: {
-        url: dailyData.img,
+        url: DAILY_DATA.img,
         aspect_ratio: 2.25,
       },
-      jump_list: data.jumpList,
+      jump_list: DATA.jumpList,
       card_action: {
         type: 1,
-        url: 'https://www.mcdonalds.com.cn/',
+        url: DATA.jumpUrl,
       },
     },
   },
