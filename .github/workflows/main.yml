@@ -22,4 +22,4 @@ jobs:
         with:
           node-version: '12.x'
       - run: npm ci
-      - run: npm run send ${{secret.WECOM_BOT_KEY}}
+      - run: npm run send ${{ secrets.WECOM_BOT_KEY }}
