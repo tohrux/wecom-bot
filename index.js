@@ -1,10 +1,9 @@
 const axios = require('axios')
 const WECOM_BOT_KEY = process.argv[2]
-const { getTodayDate } = require('./configs/daily.js')
-const DATA = require('./data/data.js')
+const { getTodayDate } = require('./utils')
+const DATA = require('./data')
 
-const url =
-  `https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=${WECOM_BOT_KEY}`
+const url = `https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=${WECOM_BOT_KEY}`
 
 const DAILY_DATA = getTodayDate()
 

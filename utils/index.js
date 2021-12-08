@@ -1,4 +1,4 @@
-const { dailyData } = require('../data/data.js')
+const { dailyData } = require('../data/index.js')
 function getTodayString(now) {
   const YYYY = now.getFullYear()
   const MM = now.getMonth() + 1
@@ -10,7 +10,7 @@ function getTodayDate() {
   if(now.getDay()===4){
     return dailyData['crazyThursday']
   }
-  return dailyData[getTodayString(now)]
+  return dailyData[getTodayString(now)] || dailyData['default']
 }
 
 module.exports = {
