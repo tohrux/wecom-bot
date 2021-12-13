@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "send": "node index.js"
+    "send": "NODE_ENV=production node index.js",
+    "start": "NODE_ENV=development node index.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/tohrux/wecom-bot#readme",
   "dependencies": {
-    "axios": "^0.24.0"
+    "axios": "^0.24.0",
+    "ejsexcel": "^3.6.2"
   }
 }
