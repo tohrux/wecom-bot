@@ -30,17 +30,6 @@ ejsExcel
               appraise: row[6],
             })
           }
-        } else if (index === 1) {
-          if (rowIndex > 0 && row[0] && row[1] && row[1].length) {
-            _data[index].push({
-              name: row[0],
-              isNear: row[1],
-              price: row[2],
-              type: row[3],
-              recommend: row[4],
-              address: row[5],
-            })
-          }
         }
       })
       data += `let sheet${index} = ${JSON.stringify(_data[index])};`
