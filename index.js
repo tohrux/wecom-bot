@@ -2,13 +2,13 @@ const axios = require('axios')
 const WECOM_BOT_KEY = process.argv[2]
 const DATA = require('./data')
 const url = `https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=${WECOM_BOT_KEY}`
-
+const { sendType } = require('./configs')
 const axiosConfig = {
   method: 'post',
   headers: {
     'Content-Type': 'application/json;charset=utf-8;',
   },
-  data: DATA.markdown,
+  data: DATA[sendType],
 }
 function send() {
   axios(url, axiosConfig)

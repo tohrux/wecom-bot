@@ -51,7 +51,7 @@ function getTodayString(now) {
 }
 function getTodayDate() {
   const now = new Date(
-    Date.now() + process.env.NODE_ENV !== 'development' ? 8 * 60 * 60 * 1000 : 0
+    Date.now() + (process.env.NODE_ENV !== 'development' ? 8 * 60 * 60 * 1000 : 0)
   )
   if (now.getDay() === 4) {
     return dailyData['crazyThursday']
