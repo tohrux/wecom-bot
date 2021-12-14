@@ -1,3 +1,9 @@
+/*
+ * @Author: JOJO
+ * @Date: 2021-12-14 00:23:31
+ * @LastEditTime: 2021-12-14 14:23:29
+ * @LastEditors: JOJO
+ */
 const { getRandomInt } = require('../utils')
 const { sheet0 } = require('./excelData')
 const {jumpUrl} = require('../configs')
@@ -21,7 +27,7 @@ function jsonToMd(takeOut) {
     ><font color="warning">${takeOut.name}</font>
     >价格: <font color="comment">${takeOut.price}</font>
     >类型: <font color="comment">${takeOut.type}</font>${takeOutRecommend}${takeOutComment}${takeOutAppraise}\n
-👉[三门路干饭指南](${jumpUrl})👈`
+[👉 三门路干饭指南](${jumpUrl})`
 }
 
 const markdown = {
